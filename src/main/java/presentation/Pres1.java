@@ -6,11 +6,10 @@ import metier.MetierImpl;
 public class Pres1 {
     // factory : là ou on va fabrique les objets
     public static void main(String[] args) {
-        // instanciation statique
         DaoImpl2 dao = new DaoImpl2();
-        MetierImpl metier = new MetierImpl();
+        MetierImpl metier = new MetierImpl(dao); // injection via constructor
         // injection des dépendances
-        metier.setDao(dao);
-        System.out.println("Résultat : "+metier.calcul());
+        //metier.setDao(dao);
+        System.out.println("Résultat : " + metier.calcul());
     }
 }
