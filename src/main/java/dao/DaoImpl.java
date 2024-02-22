@@ -1,5 +1,8 @@
 package dao;
 
+import org.springframework.stereotype.Component;
+
+@Component("vb") // => au démarrage de l'application créer un objet de cette classe
 public class DaoImpl implements IDao {
     @Override
     public double getData() {
